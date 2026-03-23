@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devninja"
+version = "1.0.0"
+description = "One-command dev environment bootstrapper for any OS"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "devninja contributors"}]
+keywords = ["developer", "setup", "bootstrap", "environment", "devtools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development",
+]
+dependencies = [
+    "click>=8.1",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+devninja = "devninja.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["devninja*"]

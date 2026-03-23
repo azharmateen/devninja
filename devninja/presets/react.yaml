@@ -1,0 +1,36 @@
+description: "React frontend development: Node.js, Yarn, VS Code with React extensions"
+
+packages:
+  - git
+  - node
+  - name: yarn
+    method: npm_global
+  - name: pnpm
+    method: npm_global
+  - name: create-react-app
+    method: npm_global
+  - name: vite
+    method: npm_global
+
+vscode_extensions:
+  - ms-vscode.vscode-typescript-next
+  - dbaeumer.vscode-eslint
+  - esbenp.prettier-vscode
+  - dsznajder.es7-react-js-snippets
+  - bradlc.vscode-tailwindcss
+  - formulahendry.auto-rename-tag
+  - christian-kohler.path-intellisense
+  - steoates.autoimport
+  - naumovs.color-highlight
+  - csstools.postcss
+
+aliases:
+  nrd: "npm run dev"
+  nrb: "npm run build"
+  nrt: "npm run test"
+
+env_vars:
+  EDITOR: "code --wait"
+  BROWSER: "none"
+
+path_entries: []

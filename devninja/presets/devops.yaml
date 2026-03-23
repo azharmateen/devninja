@@ -1,0 +1,45 @@
+description: "DevOps toolkit: Docker, kubectl, Helm, Terraform, AWS CLI"
+
+packages:
+  - git
+  - name: docker
+    method: brew_cask
+  - kubectl
+  - helm
+  - terraform
+  - awscli
+  - name: k9s
+  - name: kubectx
+  - name: stern
+  - name: jq
+  - name: yq
+
+vscode_extensions:
+  - ms-azuretools.vscode-docker
+  - ms-kubernetes-tools.vscode-kubernetes-tools
+  - hashicorp.terraform
+  - redhat.vscode-yaml
+  - timonwong.shellcheck
+
+aliases:
+  k: "kubectl"
+  kgp: "kubectl get pods"
+  kgs: "kubectl get svc"
+  kgd: "kubectl get deployments"
+  kga: "kubectl get all"
+  kns: "kubens"
+  kctx: "kubectx"
+  dc: "docker compose"
+  dps: "docker ps"
+  tf: "terraform"
+  tfi: "terraform init"
+  tfp: "terraform plan"
+  tfa: "terraform apply"
+
+env_vars:
+  EDITOR: "code --wait"
+  KUBE_EDITOR: "code --wait"
+  AWS_PAGER: ""
+
+path_entries:
+  - "~/.local/bin"

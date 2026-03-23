@@ -1,0 +1,53 @@
+description: "Python ML/Data Science: Python, Conda, Jupyter, VS Code with Python extensions"
+
+packages:
+  - git
+  - python
+  - name: conda
+    method: custom
+    command: |
+      if command -v conda &>/dev/null; then echo "conda already installed"; else
+        curl -fsSL https://repo.anaconda.com/miniconda/Miniconda3-latest-$(uname -s)-$(uname -m).sh -o /tmp/miniconda.sh
+        bash /tmp/miniconda.sh -b -p $HOME/miniconda3
+        rm /tmp/miniconda.sh
+      fi
+  - name: jupyter
+    method: pip
+  - name: jupyterlab
+    method: pip
+  - name: numpy
+    method: pip
+  - name: pandas
+    method: pip
+  - name: matplotlib
+    method: pip
+  - name: scikit-learn
+    method: pip
+  - name: black
+    method: pip
+  - name: ruff
+    method: pip
+
+vscode_extensions:
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - ms-toolsai.jupyter
+  - ms-toolsai.jupyter-renderers
+  - charliermarsh.ruff
+  - tamasfe.even-better-toml
+
+aliases:
+  jl: "jupyter lab"
+  jn: "jupyter notebook"
+  py: "python3"
+  ipy: "ipython"
+  activate: "source venv/bin/activate"
+  mkvenv: "python3 -m venv venv && source venv/bin/activate"
+
+env_vars:
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONUNBUFFERED: "1"
+
+path_entries:
+  - "~/miniconda3/bin"
+  - "~/.local/bin"

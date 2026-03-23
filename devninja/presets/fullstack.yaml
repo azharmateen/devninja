@@ -1,0 +1,44 @@
+description: "Full-stack web development: Node.js, Python, Docker, Git, PostgreSQL, VS Code"
+
+packages:
+  - git
+  - node
+  - python
+  - name: docker
+    method: brew_cask
+  - postgresql
+  - redis
+  - name: yarn
+    method: npm_global
+  - name: pnpm
+    method: npm_global
+
+vscode_extensions:
+  - ms-vscode.vscode-typescript-next
+  - dbaeumer.vscode-eslint
+  - esbenp.prettier-vscode
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - ms-azuretools.vscode-docker
+  - eamodio.gitlens
+  - bradlc.vscode-tailwindcss
+  - formulahendry.auto-rename-tag
+  - christian-kohler.path-intellisense
+
+aliases:
+  gs: "git status"
+  gp: "git push"
+  gl: "git log --oneline -20"
+  gco: "git checkout"
+  gcm: "git commit -m"
+  dc: "docker compose"
+  dps: "docker ps"
+  nrd: "npm run dev"
+  nrb: "npm run build"
+
+env_vars:
+  EDITOR: "code --wait"
+  NODE_ENV: "development"
+
+path_entries:
+  - "~/.local/bin"

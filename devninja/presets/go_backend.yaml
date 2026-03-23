@@ -1,0 +1,38 @@
+description: "Go backend development: Go, Docker, PostgreSQL, Redis, VS Code with Go extensions"
+
+packages:
+  - git
+  - go
+  - name: docker
+    method: brew_cask
+  - postgresql
+  - redis
+  - name: golangci-lint
+  - name: protobuf
+  - name: grpcurl
+  - jq
+
+vscode_extensions:
+  - golang.go
+  - ms-azuretools.vscode-docker
+  - zxh404.vscode-proto3
+  - redhat.vscode-yaml
+  - eamodio.gitlens
+
+aliases:
+  gr: "go run ."
+  gt: "go test ./..."
+  gb: "go build ."
+  gmt: "go mod tidy"
+  gmi: "go mod init"
+  dc: "docker compose"
+  dps: "docker ps"
+
+env_vars:
+  GOPATH: "$HOME/go"
+  GOBIN: "$HOME/go/bin"
+  CGO_ENABLED: "0"
+
+path_entries:
+  - "$HOME/go/bin"
+  - "~/.local/bin"
