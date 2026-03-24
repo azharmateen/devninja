@@ -1,5 +1,8 @@
 # devninja
 
+[![Built with Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-blue?logo=anthropic&logoColor=white)](https://claude.ai/code)
+
+
 One-command dev environment bootstrapper for any OS.
 
 ```bash
